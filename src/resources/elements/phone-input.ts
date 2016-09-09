@@ -27,10 +27,7 @@ export class PhoneInput {
   }
 
   private applyMask() {
-    if (padrao.test(this.value))
-      this.displayValue = this.value.replace(padrao, "($1) $2-$3");
-    else
-      this.displayValue = this.value
+    this.displayValue = padrao.test(this.value) ? this.value.replace(padrao, "($1) $2-$3") : this.value;
   }
 
   private validate() {
