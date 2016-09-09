@@ -1,0 +1,4 @@
+<template>
+  <input type="text" placeholder="phone here" value.bind="displayValue" focus.bind="hasFocus" style="${isInvalid ? 'border: 1px solid red;' : ''}" ref="inputElement">
+  <span if.bind="isInvalid" style="color: red">Incorrect phone</span>
+</template>
